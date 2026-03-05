@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
   <title>Pile ou Face</title>
-  <link rel="icon" href="Sans titre 40_20260305172439.png">
+  <link rel="icone" href="Sans titre 40_20260305172439.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -465,7 +465,7 @@
 
   <div class="inputs">
     <div class="input-group group-pile">
-      <label>🟣 Pile</label>
+      <label>🍋 Pile</label>
       <input type="text" id="textPile" placeholder="Ex : Je gagne !" maxlength="40"/>
     </div>
     <div class="input-group group-face">
@@ -485,7 +485,7 @@
   <!-- Compteur -->
   <div class="stats">
     <div class="stat-box" id="boxPile">
-      <div class="stat-label">🟣 Pile</div>
+      <div class="stat-label">🍋 Pile</div>
       <div class="stat-count" id="countPile">0</div>
       <div class="stat-streak" id="streakPile">série : 0</div>
     </div>
@@ -527,7 +527,7 @@
           <div class="seq-empty" id="seqEmpty">Aucun résultat programmé — aléatoire</div>
         </div>
         <div class="seq-controls">
-          <button class="btn-seq pile" onclick="addSeq('pile')">+ 🟣 Pile</button>
+          <button class="btn-seq pile" onclick="addSeq('pile')">+ 🍋 Pile</button>
           <button class="btn-seq face" onclick="addSeq('face')">+ 🔵 Face</button>
           <button class="btn-seq clear" onclick="clearSeq()">✕</button>
         </div>
@@ -540,7 +540,7 @@
       <div class="menu-section-title">Modifier les statistiques</div>
       <div class="stats-editor">
         <div class="stat-edit-box pile">
-          <label>🟣 Total Pile</label>
+          <label>🍋 Total Pile</label>
           <input type="number" id="editPile" min="0" value="0"/>
         </div>
         <div class="stat-edit-box face">
@@ -548,7 +548,7 @@
           <input type="number" id="editFace" min="0" value="0"/>
         </div>
         <div class="stat-edit-box pile">
-          <label>🟣 Meilleure série Pile</label>
+          <label>🍋 Meilleure série Pile</label>
           <input type="number" id="editBestP" min="0" value="0"/>
         </div>
         <div class="stat-edit-box face">
@@ -603,7 +603,7 @@
     if (result === null) {
       label.textContent = 'aucun';
     } else {
-      label.textContent = result === 'pile' ? '🟣 Pile' : '🔵 Face';
+      label.textContent = result === 'pile' ? '🍋 Pile' : '🔵 Face';
     }
   }
 
@@ -756,7 +756,7 @@
     updateStats(isPile);
 
     var resMain = document.getElementById('resMain');
-    document.getElementById('resBadge').textContent = isPile ? '🟣 PILE' : '🔵 FACE';
+    document.getElementById('resBadge').textContent = isPile ? '🍋 PILE' : '🔵 FACE';
     document.getElementById('resSide').textContent  = isPile ? 'Pile' : 'Face';
     overlay.classList.remove('pile-bg', 'face-bg', 'visible');
     overlay.classList.add(isPile ? 'pile-bg' : 'face-bg');
@@ -865,7 +865,7 @@
         var item = document.createElement('div');
         item.className = 'seq-item ' + (r === 'pile' ? 'pile-item' : 'face-item');
         item.innerHTML =
-          '<span>' + (i+1) + '. ' + (r === 'pile' ? '🟣 Pile' : '🔵 Face') + '</span>' +
+          '<span>' + (i+1) + '. ' + (r === 'pile' ? '🍋 Pile' : '🔵 Face') + '</span>' +
           '<button onclick="removeSeq(' + i + ')">×</button>';
         list.appendChild(item);
       });
